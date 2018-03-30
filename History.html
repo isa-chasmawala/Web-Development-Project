@@ -1,0 +1,164 @@
+﻿<html>
+<head>
+     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Signup.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+    History
+    </title>
+    <style type="text/css">
+        .detail
+        {
+            width:60%;
+            display: inline-block;
+            margin:0 auto;
+        }
+        .center
+        {
+            display:block;
+            margin:auto;
+            width:80%;
+        }
+        .conatainer
+        {
+            width:100%;
+            position:absolute;
+            top:30px;
+        }
+        .left
+        {
+            width:47%;
+            float:left;
+            text-align: right;
+            line-height: 37px;
+            vertical-align: middle;
+        }
+        .right
+        {
+            width:47%;
+            float:right;
+            text-align: left;
+        }
+        .right input
+        {
+            margin-top: 10px;
+            height: 25px;
+            background-color: #C8C5C4;
+            opacity:0.6;color:#463AFA;
+        }
+        input
+        {
+            margin-top: 10px;
+            height: 25px;
+            background-color: #C8C5C4;
+            opacity:0.6;color:#463AFA;   
+        }
+        .background{
+            position: fixed;
+            z-index: -1;
+            opacity: 0.8;
+            size: cover;
+            height: 100%;
+            width: 100%;
+        }
+        #page-content{
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+    </head>
+
+<body>
+        <img src="Pictures\Bing Wallpapers\tourwallpaper.jpg" class="background">
+        <input type="checkbox" id="togglerr">
+        <div id="toggler">
+            <label id="tgl" for="togglerr">≡</label>
+        </div>
+            <div class="side_menu">
+                <ul>
+                	<li><a href="Homepage.html"><label>≡</label>Menu</a></li>
+                    <li><a href="tour.php">Tour</a></li><br>
+                    <li><a href="History.html">Your History</a></li><br>
+                    <li><a href="tickets.html">Tickets</a></li><br>
+                    <li><a href="visa.html">Visa</a></li><br>
+                    <li><a href="forex.html">Forex</a></li><br>
+                    <li><a href="hotels.html">Hotel</a></li><br>
+                </ul>
+            </div>
+    	<nav class="head_div">
+        <div class="head_title">
+             <!-- ATLAS TOURS AND TRAVELS -->
+            <a href="Homepage.html"><img class="logo" src="Pictures/Logo/ATLAS_logo2.png"><span>Tours And Travels</span></a>
+        </div>
+        <div class="right_div">
+            <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+            </ul>
+        </div>
+    	</nav>
+    <div id="page-content">
+        <form action="History.php" method="post" onsubmit="return validate1();">
+        <div id="center">
+        <div id="form1" style="width:100%;display:inline-block;text-align:center">
+        <div class="detail">
+        <fieldset>
+        <legend>Enter the User's details</legend>
+        <div class="left">Enter your id<br>Enter Your First Name<br>Enter Your Last Name<br>Enter your password<br></div>
+        <div class="right">   
+        
+        <input type="number" name="user_id" id="user_id" onfocus='change(this);' onfocusout='revert(this);'><br>
+        <input type="text" name="user_firstname" id="user_firstname" onfocus='change(this);' onfocusout='revert(this);'><br>
+        <input type="text" name="user_lastname" id="user_lastname" onfocus='change(this);' onfocusout='revert(this);'><br>
+        <input type="password" name="user_password" id="user_password" onfocus='change(this);' onfocusout='revert(this);'><br>
+        <input type="submit" name="go" id="go_button" value="Go">
+        </div>
+        </fieldset>
+        </div></div></div></form>
+        <script type="text/javascript">
+            
+        function validate1(){
+            var n=document.getElementById("no_of_persons");
+            var flag=0;
+            
+            var id=document.getElementById("user_id");
+            if(id.value.length==0)
+            {
+                flag=1;
+                id.placeholder="You Must Enter ID ";
+            }
+            var fn=document.getElementById("user_firstname");
+            var ln=document.getElementById("user_lastname");
+            if(fn.value.length==0)
+            {
+                flag=1;
+                fn.placeholder="Must Enter Firstname";
+            }
+            if(ln.value.length==0)
+            {
+                flag=1;
+                ln.placeholder="Mus Enter Lastname";
+            }
+            var pwd=document.getElementById("user_password");
+            if(pwd.value.length==0)
+            {
+                flag=1;
+                pwd.placeholder="Must Enter Password.";
+            }
+            return flag==0;
+        }
+        function change(x)
+        {
+            x.style.opacity="0.8";
+        }
+        function revert(x)
+        {
+            x.style.opacity="0.5";
+        }
+
+        </script>
+    </div>
+    </body>
+    </html>

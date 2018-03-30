@@ -1,0 +1,235 @@
+﻿<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="Homepage.css" type="text/css" rel="stylesheet">
+    <link href="Signup.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+    Atlas Tours
+    </title>
+    </head>
+
+<body>
+        
+        <input type="checkbox" id="togglerr">
+        <div id="toggler">
+            <label id="tgl" for="togglerr">≡</label>
+        </div>
+            <div class="side_menu">
+                <ul>
+                	<li><a href="Homepage.html"><label>≡</label>Menu</a></li>
+                    <li><a href="tour.php">Tour</a></li><br>
+                    <li><a href="History.html">Your History</a></li><br>
+                    <li><a href="tickets.html">Tickets</a></li><br>
+                    <li><a href="visa.html">Visa</a></li><br>
+                    <li><a href="forex.html">Forex</a></li><br>
+                    <li><a href="hotels.html">Hotel</a></li><br>
+                </ul>
+            </div>
+    	<nav class="head_div">
+        <div class="head_title">
+             <!-- ATLAS TOURS AND TRAVELS -->
+            <a href="Homepage.html"><img class="logo" src="Pictures/Logo/ATLAS_logo2.png"><span>Tours And Travels</span></a>
+        </div>
+        <div class="right_div">
+            <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+            </ul>
+        </div>
+    	</nav>
+    <div id="page-content">
+    <div class="front_body">
+    <div class="about_us">
+        <h1>About us</h1>
+        <p>
+        Atlas Tours And Travels Pvt Ltd. was founded in 1975, by Mr.Mukesh Ambani. Atlas Tours always tries to serve their passengers as their family. Serving you best is our vision and motto.
+        </p>
+        <p>
+        Atlas Tours And Travels brings to you best deals on Holiday packages and all the other Services.
+        </p>
+        <p>
+            Passengers are our family and together we try to make your trips more enjoyable and helps you to create many special memories.
+        </p>
+        </div>
+
+        </div>
+    <hr><hr>
+    <div class="loc">
+        <div class="loc_intro">
+        <div style="background-color:#FF9F04;width:100%;"><h1>Switzerland</h1></div>
+        <p>
+            Switzerland is one of the finest place on earth. Here at Atlas Tours and Travels we assure you to complete your dream to explore Switzerland.
+            </p>
+            <button id="showswittab" name="switzerland" value="Know_More">Know More</button>
+            <button id="hideswittab" name="switzerland" value="Know_More">Know Less</button>
+            <br><br>
+            
+    <table class="loc_table" id="swittable" border="2" cellspacing="0" cellpadding="10" style="background-color: #FF9F04;">
+    <tr>
+        <th>Package name</th>
+        <th>Duration</th>
+        <th>price</th>
+    </tr>
+    <tr>
+        <td>Exploring Switzerland</td>
+        <td>7 Days/6 Nights</td>
+        <td>INR 1,35,000</td>
+    </tr>
+    <tr>
+        <td>Enjoying in switzerland</td>
+        <td>10 Days/9 Nights</td>
+        <td>INR 2,05,000</td>
+    </tr>
+    </table>
+
+<script src="jQuery/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   $("#swittable").hide(); 
+});
+$(document).ready(function(){
+    $("#showswittab").click(function(){
+        $("#swittable").show();
+    });
+});
+$(document).ready(function(){
+    $("#hideswittab").click(function(){
+        $("#swittable").hide();
+    });
+});
+</script>
+            
+    </div>
+        
+        <div class="loc_images">
+            <img src="Pictures/Singapore/singapore2.jpg">
+        </div>
+    </div>
+    
+    <div class="loc">
+        <div class="loc_intro">
+        <div style="background-color:#B280E2;width:100%">
+            <h1>London</h1></div>
+        <p>
+            London, the most magnificient place on earth is waiting for you. At Atlas Tours and Travels we make your dream of visiting london come true with some amazing offers and packages.
+            </p>
+            <button id="showlontab" name="london" value="Know_more" style="background-color:#B280E2;">Know More</button>
+            <button id="hidelontab" name="london" value="Know_less" style="background-color:#B280E2;">Know Less</button><br><br>
+        <table class="loc_table" id="lontable" border="2" celspacing="0" cellpadding="10" style="background-color:#B280E2;">
+            <tr>
+                <th>Package Name</th>
+                <th>Duration</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Exploring London</td>
+                <td>6 Days/5 Nights</td>
+                <td>INR 1,85,000</td>
+            </tr>
+            <tr>
+                <td>Enjoy in London</td>
+                <td>9 Days/10 Nights</td>
+                <td>INR 2,45,000</td>
+            </tr>
+            </table>
+            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
+            <script>
+            $(document).ready(function(){
+                $("#lontable").hide();
+            });
+            $(document).ready(function(){
+                $("#showlontab").click(function(){
+                    $("#lontable").show();
+                });
+            });
+            $(document).ready(function(){
+                $("#hidelontab").click(function(){
+                    $("#lontable").hide();
+                });
+            });
+            </script>
+        </div>
+        <div class="loc_images">
+            <img src="Pictures/London/london.jpg" >
+        </div>
+    </div>
+    
+    <div class="loc">
+        <div class="loc_intro">
+        <div style="background-color:#9CFF5F;width:100%;"><h1>Dubai</h1></div>
+            <p>
+            Dubai is one of the most developed countries. Initially it was more of the desert but now due to rapid development process many skyscrapers are build in Dubai. Out of those Burj-Khalifa, atlantis are major tourist attractions.
+            </p>
+            <button id="showdubtab" name="dubai" value="Know_more" style="background-color:#9CFF5F;">Know More</button>
+            <button id="hidedubtab" name="dubai" value="Know_more" style="background-color:#9CFF5F;">Know Less</button>
+            <br><br>
+            <table class="loc_table" id="dubtable" border="2" cellspacing="0" cellpadding="10" style="background-color:#9CFF5F;">
+            <tr>
+                <th>Package Name</th>
+                <th>Duration</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Exploring Dubai</td>
+                <td>7 Days/6 Nights</td>
+                <td>INR 1,15,000</td>
+            </tr>
+            <tr>
+                <td>Enjoying Dubai</td>
+                <td>11 Days/10 Nights</td>
+                <td>INR 1,85,000</td>
+            </tr>
+            </table>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
+<script>
+$(document).ready(function(){
+   $("#dubtable").hide(); 
+});
+$(document).ready(function(){
+    $("#showdubtab").click(function(){
+        $("#dubtable").show();
+    });
+});
+$(document).ready(function(){
+    $("#hidedubtab").click(function(){
+        $("#dubtable").hide();
+    });
+});
+</script>
+        </div>
+    
+    <div class="loc_images">
+        <img src="Pictures/Dubai/dub8.jpg">
+    </div> 
+</div>
+
+
+    
+        <br><br>
+<div class="ending">
+    Head Office<br>
+    Plot number 7, M.G.Road, Fort, Mumbai 400001.
+    <br><br>
+    <b style="font-size:18;color:#FC88C5">Stay Connected For Benefits<br><br><br></b>
+    <div class="logos">
+        <div class="fblogo">
+            <a><i class="fa fa-facebook"></i></a>
+        </div>
+        <div class="fblogo">
+            <a><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="fblogo">
+            <a><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="fblogo">
+            <a><i class="fa fa-snapchat"></i></a>
+        </div>
+    </div>
+    </div>
+</div>
+   
+</body>
+</html>

@@ -1,0 +1,162 @@
+﻿<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Signup.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tours</title>
+    <style type="text/css">
+        .detail
+        {
+            width:60%;
+            display: inline-block;
+            margin:0 auto;
+        }
+        .center
+        {
+            display:block;
+            margin:auto;
+            width:80%;
+        }
+        .conatainer
+        {
+            width:100%;
+            position:absolute;
+            top:30px;
+        }
+        .left
+        {
+            width:47%;
+            float:left;
+            text-align: right;
+            line-height: 37px;
+            vertical-align: middle;
+        }
+        .right
+        {
+            width:47%;
+            float:right;
+            text-align: left;
+        }
+        .right input
+        {
+            margin-top: 10px;
+            height: 25px;
+            background-color: #C8C5C4;
+            opacity:0.6;color:#463AFA;
+        }
+        input
+        {
+            margin-top: 10px;
+            height: 25px;
+            background-color: #C8C5C4;
+            opacity:0.6;color:#463AFA;   
+        }
+        .background{
+            position: fixed;
+            z-index: -1;
+            opacity: 0.5;
+            size: cover;
+            height: 100%;
+            width: 100%;
+        }
+        #page-content{
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+    </head>
+<body>
+<img src="Pictures\Bing Wallpapers\tourwallpaper.jpg" class="background">
+<input type="checkbox" id="togglerr">
+        <div id="toggler">
+            <label id="tgl" for="togglerr">≡</label>
+        </div>
+            <div class="side_menu">
+                <ul>
+                	<li><label>≡</label>Menu</li>
+                    <li><a href="tour.html">Tour</a></li><br>
+                    <li><a href="History.html">Your History</a></li><br>
+                    <li><a href="tickets.html">Tickets</a></li><br>
+                    <li><a href="visa.html">Visa</a></li><br>
+                    <li><a href="forex.html">Forex</a></li><br>
+                    <li><a href="hotels.html">Hotel</a></li><br>
+                </ul>
+            </div>
+    	<nav class="head_div">
+        <div class="head_title">
+             <!-- ATLAS TOURS AND TRAVELS -->
+            <img class="logo" src="Pictures/Logo/ATLAS_logo2.png"><span>Tours And Travels</span>
+        </div>
+        <div class="right_div">
+            <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+            </ul>
+        </div>
+    	</nav>
+    	<div id="page-content">
+        <form action="tour.php" method="post" onsubmit="return validate1();">
+        <div id="center">
+        <div style="width:100%;display:inline-block;text-align:center">
+        <div class="detail">
+        <fieldset>
+        <legend>Enter the User's details</legend>
+        <div class="left">Enter the number of persons<br>Enter your id<br>Enter your password<br></div>
+        <div class="right">   
+        <input type="number" name="no_of_persons" id="no_of_persons"  onfocus='change(this);' onfocusout='revert(this);'><br>
+        <input type="number" name="user_id" id="user_id"  onfocus='change(this);' onfocusout='revert(this);'><br>
+        <input type="password" name="password" id="user_password" onfocus='change(this);' onfocusout='revert(this);'><br>
+        <input type="button" id="go_button" value="Go" onclick="validate1();" >
+        </div>
+        </fieldset>
+        </div></div></div></form>
+        <form action="tour.php" method="post" onsubmit="return validate();">
+        <div id="person_details"></div>
+        <script>
+
+            function showPersons(){
+            var x=document.getElementById("no_of_persons").value;
+            document.getElementById("no_of_persons").readOnly=true;
+            document.getElementById("user_id").readOnly=true;
+            document.getElementById("user_password").readOnly=true;
+            document.getElementById("go_button").disabled=true;
+            var i=0;
+            var person="<div class='input_person_info   '>";
+            for(i=1;i<=x;i++)
+            {
+                person+="<div><div class='center'><fieldset>\
+                        <legend>Person"+i+"</legend>           \
+                        <div class='container'>\
+                        <div class='left'>Enter the Firstname of The Person<br>\
+                        Enter the Middlename of The Person<br>\
+                        Enter the Lastname of The Person<br>\
+                        Enter the Birthdate\
+                        </div>\
+                        <div class='right'><input type='text' name='fname"+i+"' onfocus='change(this);' onfocusout='revert(this);'><br>\
+                        <input type='text' name='mname"+i+"' onfocus='change(this);' onfocusout='revert(this);'><br>\
+                        <input type='text' name='lname"+i+"' onfocus='change(this);' onfocusout='revert(this);'><br>\
+                        <input type='date' name='bdate"+i+"'<br></div></div></fieldset></div></div>";
+            }
+            document.getElementById("person_details").innerHTML=person+"</div><br><p style='text-align:center;'><input type='submit' value='Submit'></p>";
+        }
+        function validate1(){
+            <?php
+            
+            ?>
+            showPersons();//If validated properly...
+        }
+        function change(x)
+        {
+            x.style.opacity="0.8";
+        }
+        function revert(x)
+        {
+            x.style.opacity="0.5";
+        }
+        </script>
+        </form>
+    	</div>
+</body>
+</html>

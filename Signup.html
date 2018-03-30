@@ -1,0 +1,240 @@
+﻿<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Signup.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <link rel="stylesheet" href="Signup.css" type="text/css">-->
+    <title>Signup</title>
+    <style>
+        .mySlides{
+            display: none;
+        }
+        input[type=text]{
+        	cursor:text;
+        }
+        #page-content{
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+        .mySlides{
+            position: fixed;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        .headdiv{
+            width: 550px;
+            height: 100px;
+            font-family: 'Roboto Slab', serif;
+            font-size: 48;
+            color: black;
+        }    
+        .formdiv{
+            text-align: center;
+            font-size: 22;
+        }
+        .formdiv input{
+            opacity: 0.5;
+            border: none;
+            border-bottom: 3px solid black;
+/*            background-color: #ffffff;*/
+            width:200px;
+            height: 40px;
+            font-size: 18;
+            font-family: 'Open Sans', sans-serif; 
+        }
+        .formdiv .spl{
+            opacity: 0.6;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18;
+            border-bottom: 3px solid black;
+            color: gray;
+            width: 303px;
+            height: 40px;
+        }
+        .formdiv .addr{
+            width: 610px;
+            height: 60px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18;
+            border-bottom: 3px solid black;
+            color: gray;
+        }
+        .formdiv .rad{
+            width: 60px;
+            height: 20px;
+/*            font-size: 18;*/
+        }
+        .formdiv .btn{
+            opacity: 1;
+            width: 250px;
+            background-color: #1DFD3F;
+            border: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 22;
+            border-radius: 15px;
+        }
+        .formdiv .btn:hover{
+            background-color: #8BC0F9;
+        }
+        #Error{
+        	display:block;
+        	position:absolute;
+        	bottom:-100px;
+        	background-color:white;
+        	color:red;
+        	opacity:1;
+        	font-size: 20px;
+        }
+    </style>
+    </head>
+<body>
+<input type="checkbox" id="togglerr">
+        <div id="toggler">
+            <label id="tgl" for="togglerr">≡</label>
+        </div>
+            <div class="side_menu">
+                <ul>
+                	<li><a href="Homepage.html"><label>≡</label>Menu</a></li>
+                    <li><a href="tour.php">Tour</a></li><br>
+                    <li><a href="History.php">Your History</a></li><br>
+                    <li><a href="tickets.html">Tickets</a></li><br>
+                    <li><a href="visa.html">Visa</a></li><br>
+                    <li><a href="forex.html">Forex</a></li><br>
+                    <li><a href="hotels.html">Hotel</a></li><br>
+                </ul>
+            </div>
+    	<nav class="head_div">
+        <div class="head_title">
+             <!-- ATLAS TOURS AND TRAVELS -->
+            <a href="Homepage.html"><img class="logo" src="Pictures/Logo/ATLAS_logo2.png"><span>Tours And Travels</span></a>
+        </div>
+        <div class="right_div">
+            <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+            </ul>
+        </div>
+    	</nav>
+        <img src="Pictures/SU/su1.jpg" class="mySlides">
+        <img src="Pictures/SU/su2.jpg" class="mySlides">
+        <img src="Pictures/SU/su3.jpg" class="mySlides">
+        <img src="Pictures/SU/su4.jpg" class="mySlides">
+        <img src="Pictures/SU/su5.jpg" class="mySlides">
+        <img src="Pictures/SU/su6.jpg" class="mySLides">
+<div id="page-content">
+<div class="headdiv">
+        Welcome to our family...
+    </div>
+
+<div class="formdiv">
+<form action="signup.php" method="post" onsubmit="return validate();">
+    <input type="text" name="fn" placeholder="First Name" onfocus="change(this);" onfocusout="revert(this);">
+    <input type="text" name="mn" placeholder="Middle Name" onfocus="change(this);" onfocusout="revert(this);">
+    <input type="text" name="ln" placeholder="Last Name" onfocus="change(this);" onfocusout="revert(this);">
+    <br><br>
+    <input name="email" class="email" type="email" placeholder="abc@xyz.com" onfocus="change(this);" onfocusout="revert(this);">
+    <br><br>
+    <input class="pwd" name="pwd1" type="password" placeholder="*Password(min 6 char)" onfocus="change(this);" onfocusout="revert(this);">
+    <input class="pwd" name="pwd2" type="password" placeholder="Retype your Password" onfocus="change(this);" onfocusout="revert(this);">
+    <br><br>
+    <input type="text" class="spl" name="contact" placeholder="Cell number (optional)" maxlength="10" onfocus="change(this);" onfocusout="revert(this);">
+    <select class="spl" name="City">
+        <option>Mumbai</option>
+        <option>Delhi</option>
+        <option>Chennai</option>
+        <option>Kolkata</option>
+        <option>Hyderabad</option>
+        <option>Ahemdabad</option>
+    </select><br><br>
+    <input type="text" name="addr" class="addr" placeholder="Address" onfocus="change(this);" onfocusout="revert(this);"><br><br>
+    <input type="checkbox" name="accept" class="rad">I accept all the terms and conditions*
+    <br>
+    <input type="submit" class="btn" value="Submit" name="submit">
+    </div>
+    </form>
+    <div id="Error"></div>
+<script>
+var slideIndex = 0;
+showSlides();
+function change(x)
+{
+	x.style.opacity="0.8";
+}
+function revert(x)
+{
+	x.style.opacity="0.5";
+}
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    //var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+//    for (i = 0; i < dots.length; i++) {
+//        dots[i].className = dots[i].className.replace(" active", "");
+//    }
+    slides[slideIndex-1].style.display = "block";  
+    //dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+
+function validate()
+{
+	var flag=0;
+	var fn=document.getElementsByName("fn")[0].value;
+	var mn=document.getElementsByName("mn")[0].value;
+	var ln=document.getElementsByName("ln")[0].value;
+	if(fn.length==0)
+	{
+		flag=1;
+		x=document.getElementsByName("fn")[0];
+		x.placeholder="Firstname Required";
+	}
+	if(mn.length==0)
+	{
+		flag=1;
+		x=document.getElementsByName("mn")[0];
+		x.placeholder="Middlename Required";
+	}
+	if(ln.length==0)
+	{
+		flag=1;
+		x=document.getElementsByName("ln")[0];
+		x.placeholder="Lastname Required";
+	}
+	var pwd1=document.getElementsByName("pwd1")[0].value;
+	var pwd2=document.getElementsByName("pwd2")[0].value;
+	if(pwd1.length==0)
+	{
+		flag=1;
+		x=document.getElementsByName("pwd1")[0];
+		x.placeholder="Password Required";	
+	}
+	else if(pwd1.length<6)
+	{
+		flag=1;
+		x=document.getElementsByName("pwd1")[0];
+		x.value="";
+		x.placeholder="Password must be at least 6 character long";
+	}
+	else if(!(pwd1==pwd2)){
+		flag=1;
+		x=document.getElementsByName("pwd2")[0];
+		x.value="";
+		x.placeholder="Please type the same password";
+	}
+	return flag==0;
+}
+
+</script>
+  </div>
+</body>
+</html>

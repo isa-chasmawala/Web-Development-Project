@@ -1,0 +1,153 @@
+/*Heading*/
+.head_div{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 70px;
+    background-color: #62BCFB;
+    display: flex;
+    vertical-align: top;
+    z-index:100;
+}
+.head_title{
+    width: 700px;
+    height: 55px;
+    align-content: center;
+    font-family: 'Acme', sans-serif;
+    font-size: 2rem;
+    color: aliceblue;
+    padding-top: 0px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+.logo{
+	height:inherit;
+	width:300px;
+	margin:5px 0px 5px 60px;
+}
+.right_div{
+    
+    font-family: 'Acme', sans-serif;
+    font-size: 22;
+    float: right;
+    position: absolute;
+    right: 10px;
+    align-content: center;
+    vertical-align: middle;
+}
+.right_div ul{
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+.right_div ul li{
+    vertical-align: middle; 
+    display: inline-block;
+}
+.right_div ul li{
+    margin-left: 10px;
+}
+.right_div a{
+    text-decoration: none;
+    color: black;
+}
+.right_div ul li a:hover{
+    color: white;
+}
+/*End of Heading*/
+
+
+/*Side Menu*/
+.side_menu{
+    width: 200px;
+    height: 15%;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-family: 'Acme', sans-serif;
+    font-size: 18;
+    float:left;
+    display:none;
+    position: fixed;
+    top:60px;
+    background-color: #62BCFB;    
+    color: black;
+    z-index: 100;
+    /*overflow:hidden;*/
+}
+.side_menu ul{ 
+    margin-top: 0;
+    height: 110%;
+    color: black;
+    list-style-type: none;
+}
+.side_menu a{
+    color: black;
+    text-decoration: none;
+}
+.side_menu a:hover{
+    color: #E86E3C;
+    text-decoration: underline;
+}
+/*End of Side Menu*/
+
+/*Toggler*/
+#toggler{
+    position: fixed;
+    display: block;
+    z-index: 101;
+    height: 30px;
+}
+
+#togglerr{
+    display:none;
+}
+#tgl{
+    z-index: 101;
+    position: fixed;
+    left:25px;
+    font-size: 50px;
+    top: 5px;
+}
+
+#togglerr:checked + .toggler{
+    left:200px;
+}
+#togglerr:checked + .side_menu{
+    display:block;
+    width: 15%;
+    height: 100%;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-family: 'Acme', sans-serif;
+    font-size: 18;
+    float:left;
+    position: fixed;
+    top:60px;
+    background-color: #62BCFB;    
+    color: black;
+    z-index: 100;
+}
+/*End of Toggler*/
+
+#page_content{
+	max-width: 100%;
+}
+.outer{
+    height:auto;
+    width:100%;
+}
+.inner{
+    height: 2000px;
+    background-color: red;
+    width:50%;
+    margin:0 auto;
+    position:relative;
+    top:100px;
+}
+
+#togglerr:checked + #page_content{
+	width:85%;
+	float:right;
+}
